@@ -4,9 +4,10 @@ import styled from '@emotion/styled';
 // coponent import 
 
 import Search from './search';
+import CustomButtons from './customButton';
 
 const StyledHeader = styled(AppBar)`
- background:  #2874f0;
+ background:  #2874f0;csd
  height : 59px;
  `;
  const Component = styled(Box)`
@@ -16,6 +17,10 @@ const StyledHeader = styled(AppBar)`
  const SubHeading = styled(Typography)`
  font: 10px;
  font-style: Italic`;
+
+ const CustomButtonsWrapper = styled(Box)`
+  margin: 0 5% 0 auto ;
+ `
  
 
 const Header = () => {
@@ -23,7 +28,7 @@ const Header = () => {
   return (
     <div>
       <StyledHeader>
-        <Toolbar>
+        <Toolbar style= {{ minHeight : 55 }}>
           <Component>
             <img src={logoUrl} alt='logo' style={{ }}/>
             <Box styled ={{display: 'flex' }}>
@@ -34,6 +39,9 @@ const Header = () => {
             </Box>
           </Component>
            <Search/>
+           <CustomButtonsWrapper>
+           <CustomButtons />
+           </CustomButtonsWrapper>
         </Toolbar>
       </StyledHeader>
     </div>
