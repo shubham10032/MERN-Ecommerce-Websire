@@ -1,21 +1,35 @@
-import {InputBase ,Box , styled} from '@mui/material'
-
-const  SearchContainer = styled(Box)
-`
+import { InputBase, Box, styled } from '@mui/material'
+import SearchIcon from '@mui/icons-material/Search'
+const SearchContainer = styled(Box)
+  `
 background: #fff;
-width: 38%
-border
+width: 38%;
+border-radius:2px;
+margin-left:10px;
+display:flex;
 
 `;
-const InputSearchBase = styled(InputBase)
-``;
+const InputSearchBase = styled(InputBase)`
+padding-left: 20px;
+width: 100%;
+font-size: unset;
+`;
 
-const Search = () =>{
-     return(
-        <SearchContainer>
-            <InputSearchBase />
-        </SearchContainer>
-     )
-}   
+const SearchIconWrapper = styled(Box)
+  `color : blue;
+   padding : 5px; 
+   display: flex;
+   `
+
+const Search = () => {
+  return (
+    <SearchContainer>
+      <InputSearchBase placeholder='Search for products, brands and more' />
+      <SearchIconWrapper>
+        <SearchIcon/>
+      </SearchIconWrapper>
+    </SearchContainer>
+  )
+}
 
 export default Search;
